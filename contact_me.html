@@ -3,7 +3,7 @@ Contact me form
 
 </head>
 <body>
-<form action="https://httpbin.org/post" method="pst" name="form1">
+<form action="https://httpbin.org/post" method="post" name="form1">
 Name       ：<input type="text" name="name" required><br>
 Email      ：<input type="email" name="email" required><br>
 Address    ：<input type="text" name="address" required><br>
@@ -28,7 +28,7 @@ Postal Code (without a space)：<input type="text" name="zip" pattern="[0-9A-Z]{
   </label>
   <span id="sample">　enter the hourly rate :$<input type="number" name="rate" value="" size="30" > </span>
 <br><label for="comment">Message：</label><br >
-<textarea id="comment" name="comment" placeholder="Please write down your message here" required></textarea>
+<textarea id="comment" name="comment" placeholder="Please write down your message here"></textarea>
 <br><input type="submit" value="submit">
 </form>
 <script>
