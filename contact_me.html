@@ -1,0 +1,59 @@
+<head>
+Contact me form
+
+</head>
+<body>
+<form action="https://httpbin.org/post" method="pst" name="form1">
+Name       ：<input type="text" name="name" required><br>
+Email      ：<input type="email" name="email" required><br>
+Address    ：<input type="text" name="address" required><br>
+City       ：<input type="text" name="city" list="common_city"  required><br>
+<datalist id="common_city">
+    <option value="Vancouver">
+    <option value="Toronto">
+    <option value="Montreal">
+    <option value="Victoria">
+    <option value="Halifax">
+    <option value="Ottawa">
+  </datalist>
+Postal Code (without a space)：<input type="text" name="zip" pattern="[0-9A-Z]{6}" required><br>
+<label>
+    <input class="js-check" type="radio" name="rs" value="1" onclick="formSwitch();" required  >Comment
+  </label>
+   <label>
+    <input class="js-check" type="radio" name="rs" value="1" onclick="formSwitch();" required >Hiring
+  </label>
+  <label>
+    <input class="js-check" type="radio" name="rs" value="1" onclick="formSwitch();" required >Question
+  </label>
+  <span id="sample">　enter the hourly rate :$<input type="number" name="rate" value="" size="30" required > </span>
+<br><label for="comment">Message：</label><br >
+<textarea id="comment" name="comment" placeholder="Please write down your message here" required></textarea>
+<br><input type="submit" value="submit">
+</form>
+<script>
+var selecterBox = document.getElementById('sample');
+
+    function formSwitch() {
+        check = document.getElementsByClassName('js-check')
+        if (check[0].checked) {
+            selecterBox.style.display = "none";
+
+        } else if (check[1].checked) {
+            selecterBox.style.display = "block";
+
+        } else if(check[2].checkd){
+            selecterBox.style.display = "none";
+        }else{
+            selecterBox.style.display = "none";
+        }
+    }
+    window.addEventListener('load', formSwitch());
+
+function entryChange2(){
+    if(document.getElementById('changeSelect')){
+    id = document.getElementById('changeSelect').value;
+}
+}
+</script>
+</body>
